@@ -9,4 +9,6 @@ dependencyResolutionManagement {
 rootProject.name = "Assignment"
 include ':app'
 include ':network'
-include ':common-ui'
+include ':common'
+include ':feature-one'
+include ':feature-two'
