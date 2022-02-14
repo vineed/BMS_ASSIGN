@@ -1,6 +1,5 @@
 package com.bookmyshow.network.di
 
-import android.app.Application
 import android.content.Context
 import com.bookmyshow.network.manager.NetworkManager
 import com.bookmyshow.network.manager.NetworkManagerImpl
@@ -10,15 +9,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class NetworkModule(
-    private val application: Application
-) {
-
-    @Provides
-    fun getApplication() = application
-
-    @Provides
-    fun getContext() = application.applicationContext
+class NetworkModule {
 
     @Provides
     fun getNetworkManager(

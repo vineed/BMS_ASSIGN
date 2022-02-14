@@ -42,6 +42,7 @@ dependencies {
 
     implementation project(':feature-one')
     implementation project(':feature-two')
+    implementation project(':common')
 
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
@@ -50,6 +51,9 @@ dependencies {
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+
+    implementation daggerDep.core
+    kapt daggerDep.compiler
 
     testImplementation testing.junit
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
