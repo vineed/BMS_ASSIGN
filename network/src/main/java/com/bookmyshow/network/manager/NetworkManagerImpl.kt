@@ -7,7 +7,7 @@ import androidx.annotation.IntRange
 
 internal class NetworkManagerImpl constructor(
     private val context: Context
-) : NetworkManager {
+) : com.bookmyshow.core.NetworkManager {
 
     private val connectivityManager: ConnectivityManager?
         get() = context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager

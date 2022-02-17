@@ -1,12 +1,13 @@
 package com.bookmyshow.feature_one.di
 
-import com.bookmyshow.common_ui.di.CommonDaggerProvider
+import com.bookmyshow.core.di.CoreComponentProvider
+
 
 object FeatureOneDaggerProvider {
 
     val component: FeatureOneComponent by lazy {
         DaggerFeatureOneComponent.factory().create(
-            commonComponent = CommonDaggerProvider.component
+            coreComponent = CoreComponentProvider.coreComponent
         )
     }
 }

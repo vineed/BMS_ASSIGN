@@ -1,9 +1,9 @@
 package com.bookmyshow.network.di
 
 import android.content.Context
-import com.bookmyshow.network.manager.NetworkManager
+import com.bookmyshow.core.NetworkManager
+import com.bookmyshow.core.NetworkProvider
 import com.bookmyshow.network.manager.NetworkManagerImpl
-import com.bookmyshow.network.provider.NetworkProvider
 import com.bookmyshow.network.provider.NetworkProviderImpl
 import dagger.Module
 import dagger.Provides

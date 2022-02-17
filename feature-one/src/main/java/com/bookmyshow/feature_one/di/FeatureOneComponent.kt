@@ -1,12 +1,12 @@
 package com.bookmyshow.feature_one.di
 
-import com.bookmyshow.common_ui.di.CommonComponent
+import com.bookmyshow.core.di.CoreComponent
 import com.bookmyshow.feature_one.FeatureOneActivity
 import dagger.Component
 
 @Component(
     dependencies = [
-        CommonComponent::class
+        CoreComponent::class
     ]
 )
 interface FeatureOneComponent {
@@ -14,7 +14,7 @@ interface FeatureOneComponent {
     @Component.Factory
     interface Factory {
         fun create(
-            commonComponent: CommonComponent
+            coreComponent: CoreComponent
         ): FeatureOneComponent
     }
 

@@ -6,7 +6,7 @@ import com.squareup.picasso.Picasso
 
 class ImageLoaderImpl constructor(
     private val context: Context
-) : ImageLoader {
+) : com.bookmyshow.core.ImageLoader {
 
     private var picasso: Picasso = Picasso
         .Builder(context)

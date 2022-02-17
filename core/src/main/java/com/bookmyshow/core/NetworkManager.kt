@@ -1,4 +1,4 @@
-package com.bookmyshow.network.manager
+package com.bookmyshow.core
 
 interface NetworkManager {
 

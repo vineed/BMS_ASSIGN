@@ -1,18 +1,25 @@
 package com.bookmyshow.assignment.di
 
+import android.content.Context
 import com.bookmyshow.common_ui.di.CommonModule
-import com.bookmyshow.feature_one.di.FeatureOneComponent
-import com.bookmyshow.feature_two.di.FeatureTwoComponent
+import com.bookmyshow.core.di.CoreComponent
+import com.bookmyshow.network.di.NetworkModule
+import dagger.BindsInstance
 import dagger.Component
 
 @Component(
     modules = [
         AppModule::class,
-        CommonModule::class
-    ],
-    dependencies = [
-        FeatureOneComponent::class,
-        FeatureTwoComponent::class,
+        CommonModule::class,
+        NetworkModule::class
     ]
 )
-interface AppComponent
+interface AppComponent : CoreComponent {
+
+    @Component.Factory
+    interface Factory {
+        fun create(
+            @BindsInstance applicationContext: Context
+        ): AppComponent
+    }
+}

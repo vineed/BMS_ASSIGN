@@ -3,7 +3,7 @@ package com.bookmyshow.network.provider
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 
-internal class NetworkProviderImpl : NetworkProvider {
+internal class NetworkProviderImpl : com.bookmyshow.core.NetworkProvider {
 
     private companion object {
         const val CONNECT_TIMEOUT = 30L

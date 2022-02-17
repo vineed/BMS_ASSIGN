@@ -3,14 +3,14 @@ package com.bookmyshow.feature_one
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.bookmyshow.common_ui.imageloader.ImageLoader
+import com.bookmyshow.core.ImageLoader
 import com.bookmyshow.feature_one.di.FeatureOneDaggerProvider
 import javax.inject.Inject
 
 class FeatureOneActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var imageLoader: ImageLoader
+    lateinit var imageLoader: com.bookmyshow.core.ImageLoader
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

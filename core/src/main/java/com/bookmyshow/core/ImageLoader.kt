@@ -1,4 +1,4 @@
-package com.bookmyshow.common_ui.imageloader
+package com.bookmyshow.core
 
 import android.widget.ImageView
 
