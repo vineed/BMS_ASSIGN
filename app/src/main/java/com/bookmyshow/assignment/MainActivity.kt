@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         imageCta = findViewById(R.id.image_cta)
         imageLoader.loadImage(
             imageUrl = "https://static.businessworld.in/article/article_extra_large_image/1609147522_O1aw88_BMS.jpg",
-            imageView = imageCta!!
+            imageView = requireNotNull(imageCta)
         )
 
         imageCta?.setOnClickListener {
