@@ -1,6 +1,7 @@
 package com.bookmyshow.network.provider
 
 import okhttp3.OkHttpClient
+import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 
 internal class NetworkProviderImpl : com.bookmyshow.core.NetworkProvider {
@@ -16,7 +17,14 @@ internal class NetworkProviderImpl : com.bookmyshow.core.NetworkProvider {
             .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
             .build()
 
-    override fun getApi() {
-        TODO("Not yet implemented")
+    override fun <ApiClass : Any> getApi(
+        apiClass: Class<ApiClass>,
+        baseUrl: String
+    ): ApiClass {
+        return Retrofit.Builder()
+            .baseUrl(baseUrl)
+            .client(okHttpClient)
+            .build()
+            .create(apiClass) as ApiClass
     }
 }

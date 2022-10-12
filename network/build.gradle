@@ -40,10 +40,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
 
     //Networking
-    implementation networking.okhttp
     implementation networking.okhttpLog
-    implementation networking.gson
-    implementation networking.retrofit
     implementation networking.retrofitRx
     implementation networking.retrofitGson
 

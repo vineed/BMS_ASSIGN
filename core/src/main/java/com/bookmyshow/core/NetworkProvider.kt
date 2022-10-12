@@ -2,5 +2,8 @@ package com.bookmyshow.core
 
 interface NetworkProvider {
 
-    fun getApi()
+    fun <T : Any> getApi(
+        apiClass: Class<T>,
+        baseUrl: String
+    ): T
 }
