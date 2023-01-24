@@ -4,6 +4,7 @@ import android.content.Context
 import com.bookmyshow.assignment.MainActivity
 import com.bookmyshow.common_ui.di.CommonModule
 import com.bookmyshow.core.di.CoreComponent
+import com.bookmyshow.feature_one.di.FeatureOneModule
 import com.bookmyshow.network.di.NetworkModule
 import dagger.BindsInstance
 import dagger.Component
@@ -12,7 +13,8 @@ import dagger.Component
     modules = [
         AppModule::class,
         CommonModule::class,
-        NetworkModule::class
+        NetworkModule::class,
+        FeatureOneModule::class
     ]
 )
 interface AppComponent : CoreComponent {

@@ -3,8 +3,12 @@
     package="com.bookmyshow.feature_one">
 
     <application>
+        <!--<activity
+            android:name=".venue_details.VenueDetailsActivity"
+            android:exported="false">
+        </activity>-->
         <activity
-            android:name=".FeatureOneActivity"
+            android:name=".venue.FeatureOneActivity"
             android:exported="false" />
     </application>
 

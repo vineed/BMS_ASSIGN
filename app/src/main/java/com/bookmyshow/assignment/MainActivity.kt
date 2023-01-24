@@ -6,7 +6,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.bookmyshow.assignment.di.DaggerAppComponentProvider
 import com.bookmyshow.core.ImageLoader
-import com.bookmyshow.feature_one.FeatureOneActivity
+import com.bookmyshow.feature_one.venue.FeatureOneActivity
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {

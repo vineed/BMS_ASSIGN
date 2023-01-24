@@ -21,12 +21,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures {
+        viewBinding true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = '1.8'
+        freeCompilerArgs = ['-Xjvm-default=enable'] // https://github.com/google/dagger/issues/3520 FeatureOneViewModelFactory reports error
     }
 }
 
@@ -35,6 +39,10 @@ dependencies {
     api project(":core")
 
     implementation daggerDep.core
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
     kapt daggerDep.compiler
 
     testImplementation 'junit:junit:4.13.2'
